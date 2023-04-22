@@ -6,8 +6,6 @@ import {FakehomeComponent} from './app/fake/fakehome/fakehome.component';
 import{NextpageComponent} from './app/fake/nextpage/nextpage.component'
 
 const routes: Routes = [
-
-  {path: '' , component:AppComponent},
   {path: 'fakehome' ,component: FakehomeComponent},
   {path: 'nextpage', component: NextpageComponent}
 
