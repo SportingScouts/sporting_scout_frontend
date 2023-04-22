@@ -5,12 +5,12 @@ import { AppComponent } from 'app/app.component';
 import {FakehomeComponent} from './app/fake/fakehome/fakehome.component';
 import{NextpageComponent} from './app/fake/nextpage/nextpage.component'
 
-const routes: Routes = [ 
-  
+const routes: Routes = [
+
   {path: '' , component:AppComponent},
-  {path: ' ' ,component: FakehomeComponent},
-  {path: ' ', component: NextpageComponent}
-  
+  {path: 'fakehome' ,component: FakehomeComponent},
+  {path: 'nextpage', component: NextpageComponent}
+
 ];
 
 @NgModule({
