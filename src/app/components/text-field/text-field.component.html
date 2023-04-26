@@ -1,0 +1,2 @@
+<input [ngClass]="{'is-invalid': error}" class="form-control" [type]="type" [placeholder]="placeholder" [value]="value" (input)="onInputChange($event)" [name]="name">
+<div *ngIf="error" class="invalid-feedback">{{ error }}</div>
