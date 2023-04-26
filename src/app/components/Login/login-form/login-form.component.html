@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+<div class="container">
+  <form (ngSubmit)="submitForm()">
+    <h2>Log in for the first time</h2>
+    <label for="email">Email:</label>
+    <app-text-field [(value)]="email" name="email" placeholder="Enter email" [error]="emailInvalid ? 'Please enter a valid email address.' : ''" (input)="emailInvalid = false"></app-text-field>
+    <div class="form-group ">
+      <label for="password">Password:</label>
+      <div class="input-group">
+        <input type="{{ passwordFieldType }}" class="form-control" id="password" placeholder="Enter password" [(ngModel)]="password" name="password">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="button" (click)="togglePasswordVisibility()">
+            <span *ngIf="passwordFieldType === 'password'" class="fa fa-eye"></span>
+            <span *ngIf="passwordFieldType === 'text'" class="fa fa-eye-slash"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="formLoading || emailInvalid">
+      <span *ngIf="formLoading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+      <span *ngIf="!formLoading">Login</span>
+    </button>
+  </form>
+</div>
