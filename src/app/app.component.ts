@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { Router,ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'sportingScoutFrontend';
+  constructor(private route: ActivatedRoute,
+    private router: Router )
+    {
+      this.route=route
+      this.router=router
+    }
+
+    ngOnInit(): void {
+      this.router.navigate(["login"], { relativeTo: this.route });
+    }
 }
