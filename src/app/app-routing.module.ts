@@ -2,7 +2,7 @@ import 'tslib';
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginScreenComponent } from './components/Login/login-screen/login-screen.component';
-import { HomeComponent } from './components/home/screen/home.component';
+import { HomeComponent } from './components/home/screen/HomeScreen.component';
 
 const routes: Routes = [
   {path: 'home' ,component: HomeComponent},
