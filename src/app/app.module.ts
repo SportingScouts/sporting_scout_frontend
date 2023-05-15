@@ -8,6 +8,8 @@ import { LoginScreenComponent } from './components/Login/login-screen/login-scre
 import { LoginFormComponent } from './components/Login/login-form/login-form.component';
 import { TextFieldComponent } from './components/text-field/text-field.component';
 import { HomeScreenComponent } from './components/Home/home-screen/home-screen.component';
+import { FirstTimeScreenComponent } from './components/FirstTimeLogin/first-time-screen/first-time-screen.component';
+import { FirstTimeForumComponent } from './components/FirstTimeLogin/first-time-forum/first-time-forum.component';
 
 
 @NgModule({
@@ -17,6 +19,8 @@ import { HomeScreenComponent } from './components/Home/home-screen/home-screen.c
     LoginFormComponent,
     TextFieldComponent,
     HomeScreenComponent,
+    FirstTimeScreenComponent,
+    FirstTimeForumComponent,
   ],
   imports: [
     BrowserModule,
