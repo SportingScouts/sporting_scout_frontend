@@ -2,12 +2,11 @@ import 'tslib';
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginScreenComponent } from './components/Login/login-screen/login-screen.component';
-import { HomeComponent } from './components/home/screen/HomeScreen.component';
+import { HomeScreenComponent } from './components/Home/home-screen/home-screen.component';
 
 const routes: Routes = [
-  {path: 'home' ,component: HomeComponent},
+  {path: 'home' ,component: HomeScreenComponent},
   {path: 'login', component: LoginScreenComponent}
-
 ];
 
 @NgModule({
