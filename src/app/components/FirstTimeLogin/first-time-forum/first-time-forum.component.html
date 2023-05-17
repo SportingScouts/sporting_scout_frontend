@@ -5,8 +5,8 @@
     <h2>Log in First Time</h2>
     <div class="form-group ">
       <label for="password">Password:</label>
-      <div class="input-group-append">
-        <app-text-field [(value)]="password" type="{{ passwordFieldType }}" name="password" placeholder="Enter password" [error]="passwordInvalid ? 'Please enter a valid password. \nPassword should be at least 8 characters \n Password must include atleast:1 number 1 special character 1 capital letter 1 small letter ' : ''" (input)="passwordInvalid = false"></app-text-field>
+      <div class="input-group">
+        <app-text-field [(value)]="password" type="{{ passwordFieldType }}" name="password" placeholder="Enter password" [error]="passwordInvalid ? 'Please enter a valid password. \nPassword should be at least 8 characters \n Password must include atleast:1 number 1 special character 1 capital letter 1 small letter ' : ''" (input)="passwordInvalid = false" class="flex-grow-1"></app-text-field>
         <div class="input-group-append">
           <button class="btn btn-outline-secondary" type="button" (click)="togglePasswordVisibility()">
             <span *ngIf="passwordFieldType === 'password'" class="fa fa-eye"></span>
@@ -21,7 +21,7 @@
         <app-text-field [(value)]="Repassword" type="{{ passwordFieldType }}" name="Repassword" placeholder="Re-Enter password" ></app-text-field>
       </div>
     </div>
-    <button type="submit" class="btn btn-primary" [disabled]="formLoading || passwordInvalid" [routerLink]=" readyToRoute ? ['/home'] : [] ">
+    <button type="submit" class="btn btn-primary" [disabled]="formLoading || passwordInvalid">
       <span *ngIf="formLoading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
       <span *ngIf="!formLoading">set password</span>
     </button>

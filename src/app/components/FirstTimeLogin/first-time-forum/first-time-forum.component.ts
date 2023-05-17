@@ -6,8 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./first-time-forum.component.scss']
 })
 export class FirstTimeForumComponent {
-  password: string = "";
-  Repassword: string = "";
+  password: string = '';
+  Repassword: string = '';
   passwordInvalid: boolean = false;
   formLoading: boolean = false;
   passwordFieldType: string = 'password';
@@ -26,6 +26,7 @@ export class FirstTimeForumComponent {
     else {
       console.log("match");
       this.passwordInvalid=false;
+      this.formLoading=true;
       this.readyToRoute=true;
     }
   }
