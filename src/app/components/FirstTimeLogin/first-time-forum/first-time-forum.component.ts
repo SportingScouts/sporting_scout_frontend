@@ -18,9 +18,7 @@ export class FirstTimeForumComponent {
     this.passwordFieldType = this.passwordFieldType === 'password' ? 'text' : 'password';
   }
   matchcriteria(){
-    console.log(this.password)
-    console.log(this.validatePassword(this.password))
-    if (this.password!=this.Repassword || this.password=='')
+    if (this.password!=this.Repassword || !this.validatePassword(this.password))
     {
       console.log("dont match");
       this.passwordInvalid=true;
@@ -32,8 +30,7 @@ export class FirstTimeForumComponent {
     }
   }
   private validatePassword(password: string) {
-    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!#%])[A-Za-z\d!#%]{8,32}$/;
-    console.log(password)
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%?&])[A-Za-z\d$@$!%?&]{8,}$/;
     return passwordRegex.test(password);
   }
 }
